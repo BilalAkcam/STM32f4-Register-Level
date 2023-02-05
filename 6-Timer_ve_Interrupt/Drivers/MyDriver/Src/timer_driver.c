@@ -2,7 +2,7 @@
  * timer_driver.c
  *
  *  Created on: Oct 27, 2022
- *      Author: user
+ *      Author: Bilal Habes Akcam
  */
 
 #include "timer_driver.h"

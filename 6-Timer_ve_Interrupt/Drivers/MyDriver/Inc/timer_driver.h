@@ -2,7 +2,7 @@
  * timer_driver.h
  *
  *  Created on: Oct 27, 2022
- *      Author: user
+ *      Author: Bilal Habes Akcam
  */
 
 #ifndef MYDRIVER_INC_TIMER_DRIVER_H_

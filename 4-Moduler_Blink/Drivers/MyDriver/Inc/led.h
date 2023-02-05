@@ -1,14 +1,23 @@
 /*
  * led.h
  *
- *  Created on: Oct 27, 2022
+ *  Created on: Jan 31, 2023
  *      Author: Bilal Habes Akcam
  */
 
 #ifndef MYDRIVER_INC_LED_H_
 #define MYDRIVER_INC_LED_H_
 
-void led_init(void);
-void led_status(void);
+#include <stdint.h>
+
+void ledInit(void);
+void ledState(int32_t state);
+
+
+
+
+
+
+
 
 #endif /* MYDRIVER_INC_LED_H_ */
