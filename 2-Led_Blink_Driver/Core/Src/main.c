@@ -87,18 +87,58 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
 
-  RCC->AHB1ENR |= (1<<3);     // GPIOD'nin RCC'si aktif edilmekte.
+// GPIOD'nin RCC'si aktif edilmekte.
+RCC->AHB1ENR |= (1<<3);
 
-  GPIOD->MODER &= ~(1<<29);   // D PORTUNUN 14. pini cikis pini olarak ayarlanmakta.
-  GPIOD->MODER |= (1<<28);
 
-  GPIOD->OTYPER |= (1<<15);   // Cikis tipi push-pull.
+// D PORTUNUN 12, 13, 14 ve 15. pinleri cikis pini olarak ayarlanmakta.
+GPIOD->MODER &= ~(1<<31);
+GPIOD->MODER |= (1<<30);
 
-  GPIOD->OSPEEDR &= ~(1<<29); // Cikis hizi medium secilmeke.
-  GPIOD->OSPEEDR |= (1<<28);
+GPIOD->MODER &= ~(1<<29);
+GPIOD->MODER |= (1<<28);
 
-  GPIOD->PUPDR &= ~(1<<29);   // Pull-up, pull-down direnci kullanmiyoruz.
-  GPIOD->PUPDR &= ~(1<<28);
+GPIOD->MODER &= ~(1<<27);
+GPIOD->MODER |= (1<<26);
+
+GPIOD->MODER &= ~(1<<25);
+GPIOD->MODER |= (1<<24);
+
+
+// Cikis tipi push-pull.
+GPIOD->OTYPER &= ~(1<<15);
+GPIOD->OTYPER &= ~(1<<14);
+GPIOD->OTYPER &= ~(1<<13);
+GPIOD->OTYPER &= ~(1<<12);
+
+
+//Cikis hizi medium secilmeke.
+GPIOD->OSPEEDR &= ~(1<<31);
+GPIOD->OSPEEDR |= (1<<30);
+
+GPIOD->OSPEEDR &= ~(1<<29);
+GPIOD->OSPEEDR |= (1<<28);
+
+GPIOD->OSPEEDR &= ~(1<<27);
+GPIOD->OSPEEDR |= (1<<26);
+
+GPIOD->OSPEEDR &= ~(1<<25);
+GPIOD->OSPEEDR |= (1<<24);
+
+
+// Pull-up, pull-down direnci kullanmiyoruz.
+GPIOD->PUPDR &= ~(1<<31);   
+GPIOD->PUPDR &= ~(1<<30);
+
+GPIOD->PUPDR &= ~(1<<29);
+GPIOD->PUPDR &= ~(1<<28);
+
+GPIOD->PUPDR &= ~(1<<27);
+GPIOD->PUPDR &= ~(1<<26);
+
+GPIOD->PUPDR &= ~(1<<25);
+GPIOD->PUPDR &= ~(1<<24);
+
 
 
 
@@ -113,12 +153,22 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
 
-	// 500 ms'de bir 14. pinin ODR register'i set ve reset edilir.
+	  // 500 ms'de bir 12,13,14 ve 15. pinin ODR register'i set ve reset edilerek ledler blink edilir.
 
-	GPIOD->ODR |= (1<<14);
-	HAL_Delay(500);
-	GPIOD->ODR &= ~(1<<14);
-	HAL_Delay(500);
+	  GPIOD->ODR |= (1<<15);
+	  GPIOD->ODR |= (1<<14);
+	  GPIOD->ODR |= (1<<13);
+	  GPIOD->ODR |= (1<<12);
+
+	  HAL_Delay(500);
+
+
+	  GPIOD->ODR &= ~(1<<15);
+	  GPIOD->ODR &= ~(1<<14);
+	  GPIOD->ODR &= ~(1<<13);
+	  GPIOD->ODR &= ~(1<<12);
+
+	  HAL_Delay(500);
 
 
 /*
