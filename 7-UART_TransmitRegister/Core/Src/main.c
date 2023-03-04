@@ -160,6 +160,10 @@ int main(void)
 		USART2->DR = 'L';
 		while (!(USART2->SR & (1 << 7)))
 			;
+	  	USART2->DR = '\n';
+		while (!(USART2->SR & (1 << 7)))
+			;
+	  
 		HAL_Delay(1000);
 
 
