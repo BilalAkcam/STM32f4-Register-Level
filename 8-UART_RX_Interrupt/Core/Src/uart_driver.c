@@ -14,27 +14,19 @@ static void UART_Error_Handler(void);
 
 
 /*  
-  UART_Init()
-  UART'i proje specifikasyonunda belirtilen hiz ve
-  ayarlarla baslatir. 
-  RX kesmelerini aktif hale getirir.
+  UART_Init() ile UART belirtilen hiz ve ayarlarla baslatilir. RX kesmeleri aktif hale getirilir.
 
 */
 void UART_Init()
 {
 	
   GPIO_InitTypeDef  GPIO_InitStruct;
-  
-  /*##-1- Enable peripherals and GPIO Clocks #################################*/
-  /* Enable GPIO TX/RX clock */  
-	__HAL_RCC_GPIOA_CLK_ENABLE();
+    
+  __HAL_RCC_GPIOA_CLK_ENABLE();
 
-  /* Enable USARTx clock */
-  __HAL_RCC_USART2_CLK_ENABLE(); 
   
-  /*##-2- Configure peripheral GPIO ##########################################*/  
-  /* UART TX GPIO pin configuration  */
-	
+  __HAL_RCC_USART2_CLK_ENABLE(); 
+  	
 	
   GPIO_InitStruct.Pin       = GPIO_PIN_2;
   GPIO_InitStruct.Mode      = GPIO_MODE_AF_PP;
@@ -54,14 +46,6 @@ void UART_Init()
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
     
 
-/*##-3- Configure the UART peripheral ######################################*/
-  /* Put the USART peripheral in the Asynchronous mode (UART Mode) */
-  /* UART configured as follows:
-      - Word Length = 8 Bits
-      - Stop Bit = One Stop bit
-      - Parity = None
-      - BaudRate = 9600 baud
-      - Hardware flow control disabled (RTS and CTS signals) */
   UartHandle.Instance        = USART2;
 	
   UartHandle.Init.BaudRate   = 9600;
@@ -89,12 +73,6 @@ void UART_Init()
 
 
 
-
-/**
-  * @brief  This function is executed in case of error occurrence.
-  * @param  None
-  * @retval None
-  */
 static void UART_Error_Handler(void)
 {
      while(1)
@@ -104,11 +82,6 @@ static void UART_Error_Handler(void)
 }
 
 
-/**
- * @brief  This function handles UART interrupt request.
- * @param  None
- * @retval None
- */
 void USART2_IRQHandler(void) {
 	uint32_t isrflags = USART2->ISR;
 	uint32_t control_reg1 = USART2->CR1;
