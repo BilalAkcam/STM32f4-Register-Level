@@ -83,10 +83,12 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* USER CODE BEGIN 2 */
+ 
   user_led_init();
   timer6_init();
   timer6_enable();
-  /* USER CODE END 2 */
+ 
+ /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
