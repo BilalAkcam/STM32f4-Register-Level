@@ -109,7 +109,7 @@ int main(void)
 		while ((USART2->ISR & USART_ISR_TXE) == 0);
 		
 		
-		HAL_Delay(1000);
+		HAL_Delay(2000);
 	
 	}
   /* USER CODE END 3 */
