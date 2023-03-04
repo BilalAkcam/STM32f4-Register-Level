@@ -100,9 +100,9 @@ int main(void)
 			data_flag = 0;
 			data_buffer[6] = '\0';
 
-			if (strcmp("LEDYAK", (char*) data_buffer) == 0) {
+			if (strcmp("LedYak", (char*) data_buffer) == 0) {
 				user_led_set();
-			} else if (strcmp("LEDSON", (char*) data_buffer) == 0) {
+			} else if (strcmp("LedSondur", (char*) data_buffer) == 0) {
 				user_led_reset();
 			}
 		}
