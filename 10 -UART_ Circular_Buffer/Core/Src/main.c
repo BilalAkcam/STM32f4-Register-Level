@@ -85,7 +85,7 @@ int main(void)
 
 
   /* USER CODE BEGIN 2 */
-	UART_Init();
+    UART_Init();
     button_init();
   /* USER CODE END 2 */
 
