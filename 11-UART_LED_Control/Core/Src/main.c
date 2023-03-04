@@ -67,7 +67,7 @@ void send_time_string(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	uint32_t led_hiz = 1;
+  uint32_t led_hiz = 1;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
