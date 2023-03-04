@@ -93,29 +93,21 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-		USART2->TDR = 'M';
-		while ((USART2->ISR & USART_ISR_TXE) == 0);
-		
-		USART2->TDR = 'E';
-		while ((USART2->ISR & USART_ISR_TXE) == 0);
-		
-		USART2->TDR = 'R';
-		while ((USART2->ISR & USART_ISR_TXE) == 0);
-			
-		USART2->TDR = 'H';
-		while ((USART2->ISR & USART_ISR_TXE) == 0);
-		
-		USART2->TDR = 'A';
-		while ((USART2->ISR & USART_ISR_TXE) == 0);
-		
 		USART2->TDR = 'B';
 		while ((USART2->ISR & USART_ISR_TXE) == 0);
 		
+		USART2->TDR = 'I';
+		while ((USART2->ISR & USART_ISR_TXE) == 0);
+		
+		USART2->TDR = 'L';
+		while ((USART2->ISR & USART_ISR_TXE) == 0);
+			
 		USART2->TDR = 'A';
 		while ((USART2->ISR & USART_ISR_TXE) == 0);
 		
-		USART2->TDR = '\n';
+		USART2->TDR = 'L';
 		while ((USART2->ISR & USART_ISR_TXE) == 0);
+		
 		
 		HAL_Delay(1000);
 	
