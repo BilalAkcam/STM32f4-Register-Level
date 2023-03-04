@@ -89,6 +89,7 @@ int main(void)
   timer14_enable();
 
   timer14_capture_set_period(100);
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
