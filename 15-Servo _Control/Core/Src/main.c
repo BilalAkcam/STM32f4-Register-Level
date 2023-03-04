@@ -101,7 +101,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 
-		servo_sweep();
+    servo_sweep();
   }
   /* USER CODE END 3 */
 }
