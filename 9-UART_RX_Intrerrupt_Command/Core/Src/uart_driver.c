@@ -17,7 +17,7 @@ static void UART_Error_Handler(void);
 
 
 /*  
-  UART_Init() belirtilen hiz ve ayarlarla UART'ı baslatir ve RX kesmelerini aktif hale getirir.
+  UART_Init() belirtilen hiz ve ayarlarla UART'ı baslatir ve RX kesmesini aktif hale getirir.
 
 */
 void UART_Init(void)
