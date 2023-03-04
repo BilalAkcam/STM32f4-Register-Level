@@ -9,7 +9,7 @@ void UART_Init()
   GPIO_InitTypeDef  GPIO_InitStruct;
   
 
-	__HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
 
 
   __HAL_RCC_USART2_CLK_ENABLE(); 
@@ -46,13 +46,6 @@ void UART_Init()
 	
   HAL_UART_Init(&UartHandle);
 }
-
-
-
-
-
-
-
 
 
 
