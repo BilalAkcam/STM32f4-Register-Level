@@ -3,7 +3,7 @@
 
 
 			    BILAL HABES AKCAM
-	          	        06.12.2022
+	          	        12.12.2022
 
 	  ### UART UZERINDEN GIRILEN KOMUT DIZILERI ILE UYGULAMA ###
 
