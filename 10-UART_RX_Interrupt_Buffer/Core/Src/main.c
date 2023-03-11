@@ -15,8 +15,8 @@ Komutlar Terminal Programindan Gririlmelidir.
 
 UartInterruptDriver.c Dosyasi Icersinde Oncelikle Uarrt Kesmesi Aktif Edilir.
 Kullanici Tarafindan Her Bir Veri Girildiginde Sistem Kesmeya Girer.
-7 Elemanli Komut Dizisi Sisteme Girildiginde Kesme icersinde dataFlag 1 YapÄ±lÄ±r
-ve main Kod'da Dizi Sonu Karakteri Eklenerek RxBuffer Verisi Karsilastirmelara Tabi Tutulur.
+7 Elemanli Komut Dizisi Sisteme Girildiginde Kesme Icersinde dataFlag 1 Yapilir
+ve main Kod'da Dizi Sonu Karakteri Eklenerek RxBuffer Verisi Karsilastirmalara Tabi Tutulur.
 
 
 */
