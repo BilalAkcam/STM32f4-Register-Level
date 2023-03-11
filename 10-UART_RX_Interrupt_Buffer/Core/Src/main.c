@@ -116,7 +116,7 @@ int main(void)
 
 				RxBuffer[7] = '\0';
 
-				if (strcmp("LEDIYAK", (char*) RxBuffer) == 0) {
+				if (strcmp("LEDIYAK", RxBuffer) == 0) {
 
 					GPIOD->ODR |= (1 << 15);
 				} else if (strcmp("LEDISON", RxBuffer) == 0) {
