@@ -47,21 +47,10 @@ void timerAutoReload(uint32_t reloadValue){
 
 
 
-
-
-
 void TIM3_IRQHandler(void){
 
 	TIM3->SR &= ~(1<<0);		//TIM3->SR &= ~TIM_SR_UIF;
 	GPIOD->ODR ^= (1<<15);		//15. Her Kesme Aninda D portunun 15. Bitine Blink Yaptirilir.
 }
-
-
-
-
-
-
-
-
 
 
