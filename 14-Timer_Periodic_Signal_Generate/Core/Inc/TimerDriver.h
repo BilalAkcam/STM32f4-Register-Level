@@ -17,6 +17,4 @@ void timerDisable(void);
 void timerAutoReload(uint32_t);
 
 
-
-
 #endif /* INC_TIMERDRIVER_H_ */
