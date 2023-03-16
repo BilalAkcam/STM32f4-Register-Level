@@ -6,7 +6,9 @@
  */
 
 #include "UartInterruptDriver.h"
+#include <stdint.h>
 
+uint32_t RxData = 0;
 
 volatile void UartInterruptInit(void){
 
@@ -26,6 +28,7 @@ void USART2_IRQHandler(void) {                                //UART Kesme Servi
 			&& ((USART2->CR1 & USART_CR1_RXNEIE) != RESET)) { //Eğer veri geldiyse ve kesme aktif edildiyse if icersine girilir.
 
 		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, SET);
+		RxData = (uint8_t) USART2->DR;					      //Receice'den Gelen Veri RxData Degiskenine atilir.
 
 		return;
 	}
