@@ -108,6 +108,7 @@ int main(void)
 	 */
 
 	  	/* ##### YONTEM 1 ##### */
+	    //While dongusu 0 olana kadar beklenir.
 
 //		USART2->DR = 'B';
 //		HAL_Delay(50);
@@ -143,7 +144,7 @@ int main(void)
 
 
 		  /* ##### YONTEM 2 ##### */
-	  	//While dongusu 0 olana kadar bekle.
+
 
 		USART2->DR = 'B';
 		while (!(USART2->SR & (1 << 7)))
@@ -163,10 +164,10 @@ int main(void)
 	  	USART2->DR = '\n';
 		while (!(USART2->SR & (1 << 7)))
 			;
-	  
+
 		HAL_Delay(1000);
-	  
-	  
+
+
 	  	/* ##### YONTEM 3 ##### */
 
 //		USART2->DR = 'B';
@@ -189,9 +190,9 @@ int main(void)
 //			;
 //
 //		HAL_Delay(1000);
-	  
-	  
-	  
+
+
+
 
 
 
