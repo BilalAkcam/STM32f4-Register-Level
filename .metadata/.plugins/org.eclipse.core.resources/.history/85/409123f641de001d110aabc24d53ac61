@@ -1,0 +1,63 @@
+/*
+ * timer.c
+ *
+ *  Created on: Jan 19, 2023
+ *      Author: Bilal Habes Akcam
+ */
+
+
+#include "timer.h"
+
+
+
+
+void timerInit(void){
+
+	__HAL_RCC_TIM3_CLK_ENABLE();
+
+	TIM3->PSC = 15999; 		//	16 Mhz/(15999+1) = 1, a step period is 1 ms
+	TIM3->ARR = 999;		//	Reloads per 250 ms.
+
+
+	// Interrupt Enable
+	TIM3->DIER |= (1<<0);
+
+	NVIC_EnableIRQ(TIM3_IRQn);
+	NVIC_SetPriority(TIM3_IRQn, 1);
+	TIM3->SR &= ~(1<<0);
+
+}
+
+
+
+void timerEnable(void){
+
+	TIM3->CR1 |= (1<<0);
+}
+
+
+void timerDisable(void){
+
+	TIM3->CR1 &= ~(1<<0);
+}
+
+
+void timerSetPeriod(uint16_t period){
+
+	TIM3->ARR = (period - 1);
+
+}
+
+uint16_t timerGetCounter(void){
+
+	return (TIM3->CNT);
+}
+
+
+void TIM3_IRQHandler(void){
+
+	GPIOD->ODR ^= (1<<14);
+	TIM3->SR &= ~(1<<0);
+
+}
+

@@ -1,0 +1,10 @@
+12:14:11 **** Incremental Build of configuration Debug for project 9-UART_RX_Interrupt ****
+make -j4 all 
+arm-none-eabi-size   9-UART_RX_Interrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10284	     20	   1636	  11940	   2ea4	9-UART_RX_Interrupt.elf
+Finished building: default.size.stdout
+ 
+
+12:14:11 Build Finished. 0 errors, 0 warnings. (took 640ms)
+

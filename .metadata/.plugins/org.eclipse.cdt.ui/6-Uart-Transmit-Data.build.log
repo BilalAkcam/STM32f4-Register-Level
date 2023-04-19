@@ -1,0 +1,10 @@
+17:31:37 **** Incremental Build of configuration Debug for project 6-Uart-Transmit-Data ****
+make -j4 all 
+arm-none-eabi-size   6-Uart-Transmit-Data.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7916	     20	   1636	   9572	   2564	6-Uart-Transmit-Data.elf
+Finished building: default.size.stdout
+ 
+
+17:31:38 Build Finished. 0 errors, 0 warnings. (took 609ms)
+

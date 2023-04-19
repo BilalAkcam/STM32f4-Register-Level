@@ -1,0 +1,23 @@
+/*
+ * CircularBuffer.c
+ *
+ *  Created on: Apr 17, 2023
+ *      Author: ralpm
+ */
+
+
+#include "CircularBuffer.h"
+
+
+void UART_Enable(void){
+
+	SET_BIT(USART2->)
+}
+
+
+void UART_Disable(void);
+
+void UART_TX_InterruptEnable(void);
+void UART_TX_InterruptEnable(void);
+
+void sendData(void);

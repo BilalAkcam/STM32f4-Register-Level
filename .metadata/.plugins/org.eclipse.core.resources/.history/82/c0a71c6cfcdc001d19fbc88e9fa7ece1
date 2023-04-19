@@ -1,0 +1,39 @@
+/*
+ * CircularBuffer.c
+ *
+ *  Created on: Apr 17, 2023
+ *      Author: ralpm
+ */
+
+
+#include "CircularBuffer.h"
+
+
+void UART_Enable(void){
+
+	SET_BIT(USART2->CR1, USART_CR1_UE);
+}
+
+
+void UART_Disable(void){
+
+	USART2->CR1 &= ~USART_CR1_UE;
+}
+
+
+void UART_TX_InterruptEnable(void){
+
+	USART2->CR1 |= USART_CR1_TXEIE;
+}
+
+
+void UART_RX_InterruptEnable(void){
+
+	USART2->CR1 |= USART_CR1_RXNEIE;
+}
+
+void sendData(uint32_t a){
+
+
+}
+

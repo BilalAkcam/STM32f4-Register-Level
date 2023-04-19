@@ -1,0 +1,10 @@
+11:26:41 **** Incremental Build of configuration Debug for project 9-UART_Interrupt_Register ****
+make -j4 all 
+arm-none-eabi-size   9-UART_Interrupt_Register.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7668	     20	   1644	   9332	   2474	9-UART_Interrupt_Register.elf
+Finished building: default.size.stdout
+ 
+
+11:26:41 Build Finished. 0 errors, 0 warnings. (took 375ms)
+

@@ -1,0 +1,10 @@
+15:35:12 **** Build of configuration Debug for project 15-Timer_Output_Compare_Mode ****
+make -j4 all 
+arm-none-eabi-size   15-Timer_Output_Compare_Mode.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5044	     20	   1572	   6636	   19ec	15-Timer_Output_Compare_Mode.elf
+Finished building: default.size.stdout
+ 
+
+15:35:13 Build Finished. 0 errors, 0 warnings. (took 640ms)
+

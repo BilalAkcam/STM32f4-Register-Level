@@ -1,0 +1,10 @@
+14:19:43 **** Incremental Build of configuration Debug for project 10-UART_RX_Interrupt_Buffer ****
+make -j4 all 
+arm-none-eabi-size   10-UART_RX_Interrupt_Buffer.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8748	     44	   1668	  10460	   28dc	10-UART_RX_Interrupt_Buffer.elf
+Finished building: default.size.stdout
+ 
+
+14:19:43 Build Finished. 0 errors, 0 warnings. (took 328ms)
+

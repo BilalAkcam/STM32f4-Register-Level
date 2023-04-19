@@ -1,0 +1,18 @@
+02:37:45 **** Incremental Build of configuration Debug for project 14-Timer-Driver ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/timer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/timer.d" -MT"Core/Src/timer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/timer.o"
+arm-none-eabi-gcc -o "14-Timer-Driver.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ralpm\STM32CubeIDE\workspace_1.11.2\14-Timer-Driver\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="14-Timer-Driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 14-Timer-Driver.elf
+ 
+arm-none-eabi-size   14-Timer-Driver.elf 
+arm-none-eabi-objdump -h -S  14-Timer-Driver.elf  > "14-Timer-Driver.list"
+   text	   data	    bss	    dec	    hex	filename
+   5148	     20	   1572	   6740	   1a54	14-Timer-Driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: 14-Timer-Driver.list
+ 
+
+02:37:46 Build Finished. 0 errors, 0 warnings. (took 828ms)
+

@@ -1,0 +1,17 @@
+22:31:48 **** Incremental Build of configuration Debug for project 5-EXTI-Button ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/ButtonDriver/Src/Button.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I"C:/Users/ralpm/STM32CubeIDE/workspace_1.11.2/5-EXTI-Button/Drivers/LedDriver/Inc" -I"C:/Users/ralpm/STM32CubeIDE/workspace_1.11.2/5-EXTI-Button/Drivers/ButtonDriver/Inc" -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/ButtonDriver/Src/Button.d" -MT"Drivers/ButtonDriver/Src/Button.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/ButtonDriver/Src/Button.o"
+arm-none-eabi-gcc -o "5-EXTI-Button.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ralpm\STM32CubeIDE\workspace_1.11.2\5-EXTI-Button\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5-EXTI-Button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5-EXTI-Button.elf
+ 
+arm-none-eabi-size   5-EXTI-Button.elf 
+arm-none-eabi-objdump -h -S  5-EXTI-Button.elf  > "5-EXTI-Button.list"
+   text	   data	    bss	    dec	    hex	filename
+   5116	     20	   1572	   6708	   1a34	5-EXTI-Button.elf
+Finished building: default.size.stdout
+ 
+Finished building: 5-EXTI-Button.list
+ 
+
+22:31:49 Build Finished. 0 errors, 0 warnings. (took 766ms)
+

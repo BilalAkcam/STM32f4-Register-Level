@@ -1,0 +1,10 @@
+22:24:36 **** Incremental Build of configuration Debug for project 9-UART_RecieveInterrupt ****
+make -j4 all 
+arm-none-eabi-size   9-UART_RecieveInterrupt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7460	     20	   1636	   9116	   239c	9-UART_RecieveInterrupt.elf
+Finished building: default.size.stdout
+ 
+
+22:24:36 Build Finished. 0 errors, 0 warnings. (took 313ms)
+

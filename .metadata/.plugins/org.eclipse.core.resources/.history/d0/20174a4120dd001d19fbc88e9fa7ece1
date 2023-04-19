@@ -1,0 +1,23 @@
+/*
+ * CircularBuffer.h
+ *
+ *  Created on: Apr 17, 2023
+ *      Author: ralpm
+ */
+
+#ifndef INC_CIRCULARBUFFER_H_
+#define INC_CIRCULARBUFFER_H_
+
+#include "stm32f4xx_hal.h"
+
+
+void UART_Enable(void);
+void UART_Disable(void);
+
+void UART_TX_InterruptEnable(void);
+void UART_RX_InterruptEnable(void);
+
+uint32_t UART_ReadyData(void);
+void sendData(uint32_t);
+
+#endif /* INC_CIRCULARBUFFER_H_ */

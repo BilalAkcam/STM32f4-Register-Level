@@ -1,0 +1,10 @@
+16:14:40 **** Incremental Build of configuration Debug for project 4-LedButtonModulerBlink ****
+make -j4 all 
+arm-none-eabi-size   4-LedButtonModulerBlink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4952	     20	   1572	   6544	   1990	4-LedButtonModulerBlink.elf
+Finished building: default.size.stdout
+ 
+
+16:14:40 Build Finished. 0 errors, 0 warnings. (took 250ms)
+

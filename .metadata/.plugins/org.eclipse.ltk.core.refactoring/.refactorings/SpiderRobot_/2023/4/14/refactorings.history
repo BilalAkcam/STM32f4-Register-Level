@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;SpiderRobot_/Core/Inc/Accelotmeter.h&apos; to &apos;Accelometer.h&apos;" description="Rename resource &apos;Accelotmeter.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/Accelotmeter.h" name="Accelometer.h" stamp="1680981142885" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;SpiderRobot_/Core/Inc/Accelometer.h&apos; to &apos;Accelerometer.h&apos;" description="Rename resource &apos;Accelometer.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/Accelometer.h" name="Accelerometer.h" stamp="1680981194152" updateReferences="true"/>
+</session>

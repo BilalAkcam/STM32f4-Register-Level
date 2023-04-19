@@ -1,0 +1,30 @@
+12:44:00 **** Incremental Build of configuration Debug for project 6-UART ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:107:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  107 |    HAL_UART_Transmit(&huart2, text, sizeof(text), 100);
+      |                               ^~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:406,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "6-UART.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ralpm\STM32CubeIDE\workspace_1.11.2\6-UART\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="6-UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 6-UART.elf
+ 
+arm-none-eabi-size   6-UART.elf 
+arm-none-eabi-objdump -h -S  6-UART.elf  > "6-UART.list"
+   text	   data	    bss	    dec	    hex	filename
+   8268	     20	   1708	   9996	   270c	6-UART.elf
+Finished building: default.size.stdout
+ 
+Finished building: 6-UART.list
+ 
+
+12:44:01 Build Finished. 0 errors, 1 warnings. (took 832ms)
+

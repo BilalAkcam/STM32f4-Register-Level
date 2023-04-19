@@ -1,0 +1,10 @@
+22:24:58 **** Build of configuration Debug for project 5-EXTI ****
+make -j4 all 
+arm-none-eabi-size   5-EXTI.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5152	     20	   1572	   6744	   1a58	5-EXTI.elf
+Finished building: default.size.stdout
+ 
+
+22:24:58 Build Finished. 0 errors, 0 warnings. (took 343ms)
+

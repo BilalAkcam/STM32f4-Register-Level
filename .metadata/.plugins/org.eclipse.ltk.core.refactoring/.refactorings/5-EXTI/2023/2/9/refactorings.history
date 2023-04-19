@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;5-EXTI/Drivers/MyDriver/Inc/button.h&apos; to &apos;Button.h&apos;" description="Rename resource &apos;button.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/MyDriver/Inc/button.h" name="Button.h" stamp="1677493695752" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;5-EXTI/Drivers/MyDriver/Src/Led.h&apos; to &apos;Led.c&apos;" description="Rename resource &apos;Led.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/MyDriver/Src/Led.h" name="Led.c" stamp="1677493700937" updateReferences="true"/>
+</session>

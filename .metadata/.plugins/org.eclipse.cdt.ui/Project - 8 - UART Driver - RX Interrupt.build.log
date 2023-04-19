@@ -1,0 +1,12 @@
+15:42:05 **** Incremental Build of configuration Debug for project Project - 8 - UART Driver - RX Interrupt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/uart_driver.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DSTM32F070xB -DUSE_HAL_DRIVER -DDEBUG -c -I../Drivers/STM32F0xx_HAL_Driver/Inc -I"../../User Drivers/Inc" -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/uart_driver.d" -MT"Core/Src/uart_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/uart_driver.o"
+In file included from ../Core/Src/uart_driver.c:1:
+../../User Drivers/Inc/button_driver.h:39:2: error: #endif without #if
+   39 | #endif
+      |  ^~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/uart_driver.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+15:42:05 Build Failed. 2 errors, 0 warnings. (took 313ms)
+

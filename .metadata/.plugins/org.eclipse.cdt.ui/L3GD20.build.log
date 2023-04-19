@@ -1,0 +1,10 @@
+22:16:26 **** Incremental Build of configuration Debug for project L3GD20 ****
+make -j4 all 
+arm-none-eabi-size   L3GD20.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3844	      8	   1576	   5428	   1534	L3GD20.elf
+Finished building: default.size.stdout
+ 
+
+22:16:27 Build Finished. 0 errors, 0 warnings. (took 250ms)
+

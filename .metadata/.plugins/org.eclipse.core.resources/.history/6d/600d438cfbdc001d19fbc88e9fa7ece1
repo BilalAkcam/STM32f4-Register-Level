@@ -1,0 +1,13 @@
+/*
+ * CircularBuffer.h
+ *
+ *  Created on: Apr 17, 2023
+ *      Author: ralpm
+ */
+
+#ifndef INC_CIRCULARBUFFER_H_
+#define INC_CIRCULARBUFFER_H_
+
+
+
+#endif /* INC_CIRCULARBUFFER_H_ */

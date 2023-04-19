@@ -1,0 +1,113 @@
+/*
+ * CircularBuffer.c
+ *
+ *  Created on: Apr 17, 2023
+ *      Author: ralpm
+ */
+
+
+#include "CircularBuffer.h"
+#define BUFFER_SIZE 128
+
+
+
+typedef struct{
+
+	uint32_t buffer[BUFFER_SIZE];
+	uint8_t headPointer;
+	uint8_t tailPointer;
+
+}UART_Buffer_t;
+
+
+UART_Buffer_t UART_TX_Buffer;
+UART_Buffer_t UART_RX_Buffer;
+
+
+
+
+
+void UART_Enable(void){
+
+	SET_BIT(USART2->CR1, USART_CR1_UE);
+}
+
+
+void UART_Disable(void){
+
+	USART2->CR1 &= ~USART_CR1_UE;
+}
+
+
+void UART_TX_InterruptEnable(void){
+
+	USART2->CR1 |= USART_CR1_TXEIE;
+
+	NVIC_EnableIRQ(USART2_IRQn);
+	NVIC_SetPriority(USART2_IRQn, 1);
+}
+
+
+void UART_RX_InterruptEnable(void){
+
+	USART2->CR1 |= USART_CR1_RXNEIE;
+}
+
+void sendData(uint32_t a){
+
+	UART_TX_Buffer.buffer[UART_TX_Buffer.headPointer++] = a;
+
+	if (UART_TX_Buffer.headPointer == BUFFER_SIZE) {
+
+		UART_TX_Buffer.headPointer = 0;
+	}
+
+	UART_TX_InterruptEnable();
+}
+
+
+
+void USART2_IRQHandler(void){
+
+	if((USART2->CR1 & USART_CR1_RXNEIE) && (USART2->SR & USART_SR_RXNE)){
+
+		UART_RX_Buffer.buffer[UART_RX_Buffer.headPointer++] = USART2->DR;
+
+		if(UART_RX_Buffer.headPointer == BUFFER_SIZE){
+
+			UART_RX_Buffer.headPointer = 0;
+
+		}
+		return;
+	}
+
+
+
+	if ((USART2->CR1 & USART_CR1_TXEIE) && (USART2->SR & USART_SR_TXE)) {
+
+		if (UART_TX_Buffer.tailPointer != UART_RX_Buffer.headPointer) {
+
+			USART2->DR = UART_TX_Buffer.buffer[UART_TX_Buffer.tailPointer++];
+
+			if (UART_TX_Buffer.tailPointer == BUFFER_SIZE) {
+
+				UART_TX_Buffer.tailPointer = 0;
+
+			}
+		}
+
+		else{
+			CLEAR_BIT(USART2->CR1, USART_CR1_TXEIE);
+		}
+
+		return;
+	}
+
+}
+
+
+
+
+
+
+

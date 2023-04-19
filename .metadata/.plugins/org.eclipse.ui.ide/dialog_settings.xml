@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\ralpm\STM32CubeIDE\workspace_1.11.2\SpiderRobot_"/>
+			<item value="C:\Users\ralpm\Desktop\STM32-Projeleri-main\STM32-Projeleri-main\SpiderRobot_"/>
+			<item value="C:\Users\ralpm\STM32CubeIDE\workspace_1.11.2\L3GD20"/>
+			<item value="C:\Users\ralpm\Desktop\asd"/>
+			<item value="C:\Users\ralpm\Desktop\SpiderRobot"/>
+			<item value="C:\Users\ralpm\Desktop\Örümcek Robot"/>
+			<item value="C:\Users\ralpm\STM32CubeIDE\workspace_1.11.2\14-Timer_Periodic_Signal_Generate"/>
+			<item value="C:\Users\ralpm\Desktop\14-Timer_Periodic_Signal_Generate"/>
+			<item value="C:\Users\ralpm\Desktop\STM32TrainingExamplesRegisterLevel-main\STM32TrainingExamplesRegisterLevel-main\STM32CubeIDE\Project - 10 - UART Driver - Circular Buffer"/>
+			<item value="C:\Users\ralpm\Desktop\10-UART_RX_Interrupt_Buffer"/>
+			<item value="C:\Users\ralpm\Desktop\STM32TrainingExamplesRegisterLevel-main\STM32TrainingExamplesRegisterLevel-main\STM32CubeIDE\Project - 8 - UART Driver - RX Interrupt"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

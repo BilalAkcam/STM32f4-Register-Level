@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;5-EXTI-Button/Drivers/LedDriver/ButtonDriver&apos; to &apos;Inc&apos;" description="Rename resource &apos;ButtonDriver&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/LedDriver/ButtonDriver" name="Inc" stamp="1679941855831" updateReferences="true"/>
+</session>

@@ -1,0 +1,10 @@
+15:52:59 **** Incremental Build of configuration Debug for project 8-UART-Recive-Register ****
+make -j4 all 
+arm-none-eabi-size   8-UART-Recive-Register.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7464	     20	   1636	   9120	   23a0	8-UART-Recive-Register.elf
+Finished building: default.size.stdout
+ 
+
+15:52:59 Build Finished. 0 errors, 0 warnings. (took 375ms)
+

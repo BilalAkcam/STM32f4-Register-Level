@@ -1,0 +1,10 @@
+13:30:03 **** Incremental Build of configuration Debug for project 12-UART-RX-TX-Buffer ****
+make -j4 all 
+arm-none-eabi-size   12-UART-RX-TX-Buffer.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7728	     20	   1652	   9400	   24b8	12-UART-RX-TX-Buffer.elf
+Finished building: default.size.stdout
+ 
+
+13:30:04 Build Finished. 0 errors, 0 warnings. (took 313ms)
+

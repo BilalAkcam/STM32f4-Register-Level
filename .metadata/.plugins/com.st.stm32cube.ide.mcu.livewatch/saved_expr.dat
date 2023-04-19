@@ -1,0 +1,6 @@
+UART_TX_Buffer.buffer
+UART_TX_Buffer.headPointer
+UART_TX_Buffer.buffer
+UART_TX_Buffer.headPointer
+UART_TX_Buffer.tailPointer
+UART_TX_Buffer.headPointer

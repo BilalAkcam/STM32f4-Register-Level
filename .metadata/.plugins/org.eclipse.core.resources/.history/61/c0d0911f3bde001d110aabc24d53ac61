@@ -1,0 +1,20 @@
+/*
+ * Led.h
+ *
+ *  Created on: Mar 27, 2023
+ *      Author: ralpm
+ */
+
+#ifndef LEDDRIVER_INC_LED_H_
+#define LEDDRIVER_INC_LED_H_
+
+#include "stm32f4xx_hal.h"
+
+void ledInit(void);
+void ledOn(void);
+void ledOff(void);
+
+
+
+
+#endif /* LEDDRIVER_INC_LED_H_ */

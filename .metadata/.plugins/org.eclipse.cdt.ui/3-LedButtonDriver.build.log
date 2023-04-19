@@ -1,0 +1,10 @@
+15:36:38 **** Incremental Build of configuration Debug for project 3-LedButtonDriver ****
+make -j4 all 
+arm-none-eabi-size   3-LedButtonDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4956	     20	   1572	   6548	   1994	3-LedButtonDriver.elf
+Finished building: default.size.stdout
+ 
+
+15:36:38 Build Finished. 0 errors, 0 warnings. (took 328ms)
+

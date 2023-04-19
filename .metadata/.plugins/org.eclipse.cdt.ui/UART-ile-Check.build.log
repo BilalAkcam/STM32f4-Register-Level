@@ -1,0 +1,10 @@
+16:42:37 **** Incremental Build of configuration Debug for project UART-ile-Check ****
+make -j4 all 
+arm-none-eabi-size   UART-ile-Check.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7720	     20	   1636	   9376	   24a0	UART-ile-Check.elf
+Finished building: default.size.stdout
+ 
+
+16:42:37 Build Finished. 0 errors, 0 warnings. (took 366ms)
+

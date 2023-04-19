@@ -1,0 +1,10 @@
+16:40:20 **** Incremental Build of configuration Debug for project 11-UART_Circular_Buffer ****
+make -j4 all 
+arm-none-eabi-size   11-UART_Circular_Buffer.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7780	     20	   1772	   9572	   2564	11-UART_Circular_Buffer.elf
+Finished building: default.size.stdout
+ 
+
+16:40:20 Build Finished. 0 errors, 0 warnings. (took 406ms)
+

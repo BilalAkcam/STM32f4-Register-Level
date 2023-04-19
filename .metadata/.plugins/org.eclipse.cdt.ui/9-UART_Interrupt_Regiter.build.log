@@ -1,0 +1,21 @@
+22:50:47 **** Incremental Build of configuration Debug for project 9-UART_Interrupt_Regiter ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'USART2_IRQHandler':
+../Core/Src/main.c:60:16: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   60 |  if(USART2->SR & USART_SR_RXNE == USART_SR_RXNE){
+      |                ^
+arm-none-eabi-gcc -o "9-UART_Interrupt_Regiter.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ralpm\STM32CubeIDE\workspace_1.11.2\9-UART_Interrupt_Regiter\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="9-UART_Interrupt_Regiter.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 9-UART_Interrupt_Regiter.elf
+ 
+arm-none-eabi-size   9-UART_Interrupt_Regiter.elf 
+arm-none-eabi-objdump -h -S  9-UART_Interrupt_Regiter.elf  > "9-UART_Interrupt_Regiter.list"
+   text	   data	    bss	    dec	    hex	filename
+   7592	     20	   1636	   9248	   2420	9-UART_Interrupt_Regiter.elf
+Finished building: default.size.stdout
+ 
+Finished building: 9-UART_Interrupt_Regiter.list
+ 
+
+22:50:47 Build Finished. 0 errors, 1 warnings. (took 765ms)
+

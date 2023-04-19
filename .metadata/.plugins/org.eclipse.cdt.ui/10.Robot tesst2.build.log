@@ -1,0 +1,10 @@
+15:27:45 **** Incremental Build of configuration Debug for project 10.Robot tesst2 ****
+make -j4 all 
+arm-none-eabi-size   10.Robot\ tesst2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12392	     88	   1856	  14336	   3800	10.Robot tesst2.elf
+Finished building: default.size.stdout
+ 
+
+15:27:45 Build Finished. 0 errors, 0 warnings. (took 422ms)
+

@@ -1,0 +1,10 @@
+15:33:32 **** Incremental Build of configuration Debug for project 2-Blink-Driver ****
+make -j4 all 
+arm-none-eabi-size   2-Blink-Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5468	     20	   1572	   7060	   1b94	2-Blink-Driver.elf
+Finished building: default.size.stdout
+ 
+
+15:33:32 Build Finished. 0 errors, 0 warnings. (took 344ms)
+
